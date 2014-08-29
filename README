@@ -1,0 +1,36 @@
+Release v1.0 of the HubCap chromecast exploit
+
+Requirements
+------------
+
+- This source tree
+- LUFA framework
+- avr-gcc compiler
+
+How to build
+------------
+
+Set the makefile up for your target (see the LUFA documentation for further details), and run:
+
+make VICTIM=OTA_16664 or make VICTIM=OTA_12940 depending on what OTA you're targetting.
+
+About the code
+--------------
+
+Due to the somewhat complex nature of the exploit the code was written in an object oriented
+fashion rather than a simple statemachine. Somewhere along the lines (probably around the time
+I had to dump the firmware blind) the code ended up in the state it's currently in. It's not
+pretty, and it uses more memory than it should but it works. You'll notice code-duplication
+through out the devices, which was for 'testing purposes' and then never got fixed.
+
+If you were so inclined to get this code running on a more memory constrained device, I would
+personally probably transform it into a dumb statemachine. Good luck.
+
+The assembly files in the payload directory are left as a reference, no tools are provided to
+create the header files from them.
+
+License
+-------
+
+Released under the I-don't-give-a-damn license. Feel free to use this code however you
+please. 

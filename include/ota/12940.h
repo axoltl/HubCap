@@ -1,0 +1,8 @@
+#define HUB_ARRAY_ADDR      (0x1EF710UL)
+#define HUB_ARRAY_IMM_ADDR  (0x1A114CUL)
+#define HUB_BASE_PTR        0x8C,0xEC,0x4F,0x00
+#define HUB_NEW_ARRAY_PTR   0x90,0xED,0x4F,0x00
+
+#define PAYLOAD_PAD         0x00,0x00,0x00,0x00
+#define PAYLOAD_SIZE        20
+
